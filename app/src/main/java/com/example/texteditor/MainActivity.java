@@ -218,6 +218,9 @@ public class MainActivity extends AppCompatActivity {
         layout.setOrientation(LinearLayout.VERTICAL);
         EditText oldName = new EditText(this);
         oldName.setHint("Enter the filename");
+        String old_Name = fileNameDisplay.getText().toString();
+        old_Name = old_Name.substring(0, old_Name.length()-4);
+        if(!old_Name.equals("untitled")) oldName.setText(old_Name);
         EditText newName = new EditText(this);
         newName.setHint("Enter new filename");
         layout.addView(oldName);
@@ -318,7 +321,7 @@ public class MainActivity extends AppCompatActivity {
         dialog_box.setView(layout);
         dialog_box.setTitle("Statistics");
         fileName.setText(Html.fromHtml(
-                "<br>Word count<br>&ensp<font color=black>" + wordCount +" </font>" +
+                "<br>Word count<br>&ensp<font color=black>" + wordCount +" </font><br>" +
                         "<br>Character count<br>&ensp<font color=black>" + charCount +"</font>"
         ));
         fileName.setTextSize(20);
