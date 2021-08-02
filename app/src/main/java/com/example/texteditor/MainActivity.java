@@ -275,6 +275,9 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         EditText fileName = new EditText(this);
+        String curFile = fileNameDisplay.getText().toString();
+        curFile = curFile.substring(0, curFile.length()-4);
+        if(!curFile.equals("untitled")) fileName.setText(curFile);
         fileName.setHint("Enter the filename");
         layout.addView(fileName);
         dialog_box.setView(layout);
@@ -287,7 +290,7 @@ public class MainActivity extends AppCompatActivity {
             if(file.exists()){
                 if(file.delete()) {
                     Toast.makeText(this, s + " deleted successfully", Toast.LENGTH_SHORT).show();
-                    if(fileNameDisplay.getText().toString().equals(file.toString())) {
+                    if(fileNameDisplay.getText().toString().equals(textFile)) {
                         editText.setText("");
                         fileNameDisplay.setText(R.string.fileName);
                     }
