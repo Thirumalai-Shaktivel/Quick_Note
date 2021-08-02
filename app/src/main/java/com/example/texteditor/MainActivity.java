@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText editText;
     TextView fileNameDisplay;
-    String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Text Editor/", s;
+    String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Text Editor/", s, s1;
     File homeDir = new File(path);
 
     @Override
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         s = textFile.substring(0, textFile.length()-4);
         if (file.exists()) {
             writeFile(fileNameDisplay.getText().toString(), editText.getText().toString());
-            Toast.makeText(this, s + " saved successfully", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Changes saved successfully", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, s + " does not exists, please create a new file", Toast.LENGTH_SHORT).show();
         }
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, s +" already exists! Type another name", Toast.LENGTH_SHORT).show();
             } else {
                 writeFile(textFile, editText.getText().toString());
-                Toast.makeText(this, s + " saved successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Created a new File "+ s +" and saved successfully", Toast.LENGTH_SHORT).show();
             }
         }).setNegativeButton("Cancel",(dialog,which) -> dialog.cancel()).show();
     }
@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
         EditText oldName = new EditText(this);
         oldName.setHint("Enter the filename");
         String old_Name = fileNameDisplay.getText().toString();
-        old_Name = old_Name.substring(0, old_Name.length()-4);
+        s1 = old_Name = old_Name.substring(0, old_Name.length()-4);
         if(!old_Name.equals("untitled")) oldName.setText(old_Name);
         EditText newName = new EditText(this);
         newName.setHint("Enter new filename");
@@ -231,24 +231,23 @@ public class MainActivity extends AppCompatActivity {
             String oldFileName = oldName.getText().toString();
             if (!oldFileName.endsWith(".txt")) oldFileName += ".txt";
             File oldFile = new File(homeDir, oldFileName);
-            oldFileName = oldFileName.substring(0, oldFileName.length()-4);
 
             String newFileName = newName.getText().toString();
             if (!newFileName.endsWith(".txt")) newFileName += ".txt";
             File newFile = new File(homeDir, newFileName);
-            newFileName = newFileName.substring(0, newFileName.length()-4);
+            s = newFileName.substring(0, newFileName.length()-4);
             if (newFile.exists()) {
-                Toast.makeText(this, newFileName + " already exists!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, s + " already exists!", Toast.LENGTH_SHORT).show();
             } else if (oldFile.exists()) {
                 if (oldFile.renameTo(newFile)) {
-                    Toast.makeText(this, oldFileName + " renamed successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, s1 + " renamed to " + s, Toast.LENGTH_SHORT).show();
                     if (fileNameDisplay.getText().toString().equals(oldFileName)) {
                         fileNameDisplay.setText(newFileName);
                     }
                 } else
                     Toast.makeText(this, "Error! File cannot be renamed", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, oldFileName + " does not exists!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, s1 + " does not exists!", Toast.LENGTH_SHORT).show();
             }
         }).setNegativeButton("Close", (dialog, which) -> dialog.cancel()).show();
     }
