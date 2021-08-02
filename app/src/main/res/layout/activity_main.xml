@@ -11,7 +11,6 @@
         android:id="@+id/divider2"
         android:layout_width="28dp"
         android:layout_height="30dp"
-        android:layout_marginStart="4dp"
         android:background="#4000A2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,19 +42,15 @@
         android:id="@+id/divider"
         android:layout_width="178dp"
         android:layout_height="3dp"
-        android:layout_marginStart="4dp"
         android:background="#D50000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fileName" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
-        android:layout_width="403dp"
-        android:layout_height="750dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="33dp"
         android:background="@color/white"
         android:gravity="start|top"
         android:hint="@string/type_text_here"
