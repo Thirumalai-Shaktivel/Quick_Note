@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Text Editor</string>
+    <string name="type_text_here">Type your text here</string>
+    <string name="save">Save</string>
+    <string name="rename">Rename</string>
+    <string name="open">Open</string>
+    <string name="create">New</string>
+    <string name="delete">Delete</string>
+    <string name="fileName">untitled.txt</string>
+    <string name="view_files">View Files</string>
+    <string name="message">Message_Logo</string>
+    <string name="save_as">Save as</string>
+    <string name="close">Close</string>
+    <string name="stats">Stats</string>
+</resources>

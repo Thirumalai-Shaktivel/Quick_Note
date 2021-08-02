@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/create"
+        android:title="@string/create"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/open"
+        android:title="@string/open"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/save"
+        android:title="@string/save"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/saveas"
+        android:title="@string/save_as"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/rename"
+        android:title="@string/rename"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/stats"
+        android:title="@string/stats"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/files"
+        android:title="@string/view_files"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/delete"
+        android:title="@string/delete"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/close"
+        android:title="@string/close"
+        app:showAsAction="never" />
+
+</menu>
