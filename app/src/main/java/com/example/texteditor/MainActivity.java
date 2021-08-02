@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
             File file = new File(homeDir, textFile);
             s = textFile.substring(0, textFile.length()-4);
             if (file.exists()) {
-                Toast.makeText(this, s + " already exists! Type another name", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, s + " already exists! Type another name", Toast.LENGTH_LONG).show();
             } else {
                 writeFile(textFile, editText.getText().toString());
                 Toast.makeText(this, s + " created successfully", Toast.LENGTH_SHORT).show();
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
             writeFile(fileNameDisplay.getText().toString(), editText.getText().toString());
             Toast.makeText(this, "Changes saved successfully", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, s + " does not exists, please create a new file", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, s + " does not exists, please create a new file", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
             File file = new File(homeDir, textFile);
             s = textFile.substring(0, textFile.length()-4);
             if (file.exists()) {
-                Toast.makeText(this, s +" already exists! Type another name", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, s +" already exists! Type another name", Toast.LENGTH_LONG).show();
             } else {
                 writeFile(textFile, editText.getText().toString());
                 Toast.makeText(this, "Created a new File "+ s +" and saved successfully", Toast.LENGTH_SHORT).show();
@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                 readFile(textFile);
                 Toast.makeText(this, s + " opened successfully", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, s + " does not exists, please create a new file", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, s + " does not exists, please create a new file", Toast.LENGTH_LONG).show();
             }
         }).setNegativeButton("Cancel",(dialog,which) -> dialog.cancel()).show();
     }
@@ -240,14 +240,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, s + " already exists!", Toast.LENGTH_SHORT).show();
             } else if (oldFile.exists()) {
                 if (oldFile.renameTo(newFile)) {
-                    Toast.makeText(this, s1 + " renamed to " + s, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, s1 + " renamed to " + s, Toast.LENGTH_LONG).show();
                     if (fileNameDisplay.getText().toString().equals(oldFileName)) {
                         fileNameDisplay.setText(newFileName);
                     }
                 } else
-                    Toast.makeText(this, "Error! File cannot be renamed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Error! File cannot be renamed", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, s1 + " does not exists!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, s1 + " does not exists!", Toast.LENGTH_LONG).show();
             }
         }).setNegativeButton("Close", (dialog, which) -> dialog.cancel()).show();
     }
@@ -292,10 +292,10 @@ public class MainActivity extends AppCompatActivity {
                         fileNameDisplay.setText(R.string.fileName);
                     }
                 } else {
-                    Toast.makeText(this, "Error! File cannot be deleted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Error! File cannot be deleted", Toast.LENGTH_LONG).show();
                 }
             } else {
-                Toast.makeText(this, s + " does not exists!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, s + " does not exists!", Toast.LENGTH_LONG).show();
             }
         }).setNegativeButton("Close", (dialog, which) -> dialog.cancel()).show();
     }
