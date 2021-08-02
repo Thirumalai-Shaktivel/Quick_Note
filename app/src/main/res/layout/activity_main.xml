@@ -51,7 +51,7 @@
     <EditText
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="403dp"
-        android:layout_height="689dp"
+        android:layout_height="750dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="38dp"
         android:layout_marginEnd="4dp"
@@ -65,9 +65,8 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.013" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
