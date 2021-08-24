@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Text Editor</string>
+    <string name="app_name">Quick Note</string>
     <string name="type_text_here">Type your text here</string>
     <string name="save">Save</string>
     <string name="rename">Rename</string>
