@@ -23,7 +23,7 @@ does not come with ads and as for permissions, ask for only storage permission t
 ## Snapshots
 <img src="Snapshots/Snapshot%201.png" alt="Home Screen" width ="300"> &emsp;
 <img src="Snapshots/Snapshot%202.png" alt="Menu options" width ="300"> &emsp;
-<img src="Snapshots/Snapshot%203.png" alt="Statistics" width ="300"> <br>
+<img src="Snapshots/Snapshot%203.png" alt="Statistics" width ="300"> &emsp;
 <img src="Snapshots/Snapshot%204.png" alt="View Created Files" width ="300"> &emsp;
 <img src="Snapshots/Snapshot%205.png" alt="Another Note" width ="300">
 ## FUTURE ENHANCEMENT
